@@ -13,9 +13,6 @@ function str_to_char_array($str){
         }
     }
 
-    foreach($array_with_count as $char => $count){
-        
-    }
 
     return $array_with_count;
 }

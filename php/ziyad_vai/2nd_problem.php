@@ -9,6 +9,8 @@ function str_to_char_array(string $str): array{
     $array_with_count = [];
     for($i = 0; $i < count($char_arr); $i++){
 
+        var_dump($char_arr[$i]);
+
         // First check if the char if exists in the output array.
         if(array_key_exists($char_arr[$i], $array_with_count)){
             // - if exists then just update the count of the item in the output array
@@ -20,6 +22,9 @@ function str_to_char_array(string $str): array{
             $new_output_array = [];
             // Go through the output array
             foreach( $array_with_count as $char => $count ){
+
+                var_dump($char);
+                var_dump($char_arr[$i]);
 
                 if($char > $char_arr[$i]){
                     // The newly added item is smaller then the current checking
@@ -41,7 +46,9 @@ function str_to_char_array(string $str): array{
                     }
                 } 
 
-                $new_output_array[$char] = $count;
+                $new_output_array[$char] = 1;
+
+                var_dump($new_output_array);
             }
 
 
